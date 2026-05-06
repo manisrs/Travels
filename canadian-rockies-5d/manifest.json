@@ -1,0 +1,19 @@
+{
+  "id": "./canadian-rockies-5d-pwa",
+  "name": "Canadian Rockies sampler",
+  "short_name": "Rockies",
+  "description": "Example 5-day Banff corridor—Bow Valley, Icefields Parkway, Jasper touch.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f9f6f2",
+  "theme_color": "#2c5282",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
