@@ -1,0 +1,11 @@
+{
+  "name": "trip-pwa",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-all.mjs",
+    "build:trip": "node scripts/build-trip.mjs",
+    "build:japan": "node scripts/extract-japan-html.mjs && node scripts/assemble-japan-guide.mjs && node scripts/extract-japan-assets.mjs && TRIP_TEMPLATE=trip-templates/examples/japan-2026-guide.json TRIP_SLUG=japan-2026-guide node scripts/build-trip.mjs"
+  },
+  "description": "Static TripPWA build from TripTemplate JSON/JSONC. No npm dependencies."
+}

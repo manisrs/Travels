@@ -1,0 +1,19 @@
+{
+  "id": "./vietnam-central-coast-7d-pwa",
+  "name": "Vietnam central coast drift",
+  "short_name": "VN Coast",
+  "description": "Example 7-day central Vietnam—Huế, Đà Nẵng, Hội An drift.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f9f6f2",
+  "theme_color": "#2c5282",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

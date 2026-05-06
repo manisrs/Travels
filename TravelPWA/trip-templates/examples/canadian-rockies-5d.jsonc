@@ -1,0 +1,586 @@
+{
+  "schemaVersion": "3.0.0",
+  "core": {
+    "meta": {
+      "id": "canadian-rockies-5d",
+      "title": "Canadian Rockies sampler",
+      "subtitle": "Example 5-day Banff corridor",
+      "tagline": "Glacier lakes ridges parkway spine",
+      "manifestDescription": "Example 5-day Banff corridor—Bow Valley, Icefields Parkway, Jasper touch.",
+      "shortName": "Rockies",
+      "defaultTimeZone": "America/Edmonton",
+      "dateRange": {
+        "start": "2026-09-10",
+        "end": "2026-09-14",
+        "dayCount": 5
+      },
+      "travelers": [
+        "Tester One"
+      ],
+      "locale": "en-US",
+      "revision": 1
+    },
+    "registry": {
+      "places": [
+        {
+          "id": "plc-calgary",
+          "name": "Calgary",
+          "locality": "Calgary",
+          "region": "Alberta",
+          "country": "Canada"
+        },
+        {
+          "id": "plc-banff",
+          "name": "Banff",
+          "locality": "Banff",
+          "region": "Alberta",
+          "country": "Canada"
+        },
+        {
+          "id": "plc-lakelouise",
+          "name": "Lake Louise",
+          "locality": "Lake Louise",
+          "region": "Alberta",
+          "country": "Canada"
+        },
+        {
+          "id": "plc-peyto",
+          "name": "Peyto Lake overlook",
+          "locality": "Banff NP",
+          "region": "Alberta",
+          "country": "Canada"
+        },
+        {
+          "id": "plc-jasper",
+          "name": "Jasper",
+          "locality": "Jasper",
+          "region": "Alberta",
+          "country": "Canada"
+        }
+      ],
+      "assets": [],
+      "logistics": []
+    },
+    "content": {
+      "overview": {
+        "introPlain": "Arrive Calgary, push quickly into Banff town for two glacier-lake mornings, dedicate one Icefields Parkway sprint toward Jasper windows, recover with a mellow Bow Valley egress day, then swing back to Calgary for wheels-up.",
+        "bullets": [
+          "Bear spray etiquette: transport outside reach in rental cars per park signage.",
+          "Sunrise Morraine/Louise logistics need headlamps shuttle research each season closure."
+        ]
+      },
+      "dayPlans": {
+        "2026-09-10": {
+          "dayOrdinal": 1,
+          "summary": {
+            "title": "YYC runway to Banff bed",
+            "headline": "Two-hour gateway push leave buffer",
+            "primaryPlaceId": "plc-banff",
+            "tags": [
+              "transit-heavy"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "cr-si-101",
+              "sortOrder": 10,
+              "timeKind": "clock",
+              "timeLabel": "11:05 AM",
+              "startLocal": "11:05",
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "daySegmentFine": "lateMorning",
+              "title": "Land Calgary fetch rental",
+              "detail": "Clear customs loop long enough for restroom before garage shuttle.",
+              "placeId": "plc-calgary",
+              "labels": []
+            },
+            {
+              "id": "cr-si-102",
+              "sortOrder": 20,
+              "timeKind": "floating",
+              "timeLabel": "Afternoon",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "title": "Drive AB-1 shoulder timing",
+              "detail": "Canmore fuel cheaper than townsite—optional pit stop groceries.",
+              "placeId": "plc-banff",
+              "labels": [
+                "drive"
+              ]
+            },
+            {
+              "id": "cr-si-103",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "Banff Avenue orientation walk",
+              "detail": "Skip heavy dinner jetlag—café grazing fine.",
+              "placeId": "plc-banff",
+              "labels": []
+            }
+          ],
+          "callouts": [],
+          "modalDetailPanelId": null,
+          "bookingHighlight": null
+        },
+        "2026-09-11": {
+          "dayOrdinal": 2,
+          "summary": {
+            "title": "Lake Louise sapphire block",
+            "headline": "Shore trail plus tea optional",
+            "primaryPlaceId": "plc-lakelouise",
+            "tags": [
+              "hiking-lite"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "cr-si-201",
+              "sortOrder": 10,
+              "timeKind": "floating",
+              "timeLabel": "Early morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "daySegmentFine": "earlyMorning",
+              "title": "Shuttle or early self-drive corridor",
+              "detail": "Parking fills fast—aim pre-0700 shoulders late sleepers skip sunrise.",
+              "placeId": "plc-lakelouise",
+              "labels": []
+            },
+            {
+              "id": "cr-si-202",
+              "sortOrder": 20,
+              "timeKind": "floating",
+              "timeLabel": "Mid-morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "title": "Lakeshore to far boathouse pacing",
+              "detail": "Carry traction devices if icy shoulder storms surprise September.",
+              "placeId": "plc-lakelouise",
+              "labels": [
+                "scenic"
+              ]
+            },
+            {
+              "id": "cr-si-203",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Afternoon",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "title": "Moraine reschedule buffer",
+              "detail": "Road opens vary—maintain slack if diverted back to Johnston alternate.",
+              "placeId": "plc-banff",
+              "labels": []
+            },
+            {
+              "id": "cr-si-204",
+              "sortOrder": 40,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "Hot tub recovery pass",
+              "detail": "Altitude mild headache normal—hydrate aggressively.",
+              "placeId": "plc-banff",
+              "labels": []
+            }
+          ],
+          "callouts": [
+            {
+              "id": "cr-co-2",
+              "variant": "danger",
+              "icon": "🐻",
+              "body": "Carry compliant food storage in Subaru rentals—never loose snacks cab rear."
+            }
+          ],
+          "modalDetailPanelId": null,
+          "bookingHighlight": null
+        },
+        "2026-09-12": {
+          "dayOrdinal": 3,
+          "summary": {
+            "title": "Icefields Parkway jag",
+            "headline": "Peyto pullout midday Jasper dinner",
+            "primaryPlaceId": "plc-peyto",
+            "tags": [
+              "long-drive"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "cr-si-301",
+              "sortOrder": 10,
+              "timeKind": "floating",
+              "timeLabel": "Morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "title": "Breakfast pack cooler",
+              "detail": "Services sparse midpoint—coffee thermos disciplined.",
+              "placeId": "plc-banff",
+              "labels": []
+            },
+            {
+              "id": "cr-si-302",
+              "sortOrder": 20,
+              "timeKind": "floating",
+              "timeLabel": "Late morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "title": "Bow Lake shoulder photo stop",
+              "detail": "Watch traffic pullouts respect coaches.",
+              "placeId": "plc-banff",
+              "labels": [
+                "scenic"
+              ]
+            },
+            {
+              "id": "cr-si-303",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Midday",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "title": "Peyto boarded catwalk brisk",
+              "detail": "Windproof shell—glacial fetch constant.",
+              "placeId": "plc-peyto",
+              "labels": []
+            },
+            {
+              "id": "cr-si-304",
+              "sortOrder": 40,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "Jasper townsite dinner quieter square",
+              "detail": "Return drive next morning symmetrical fatigue management.",
+              "placeId": "plc-jasper",
+              "labels": [
+                "dining"
+              ]
+            }
+          ],
+          "callouts": [],
+          "modalDetailPanelId": "cr-panel-parkway",
+          "bookingHighlight": {
+            "type": "lodging",
+            "refId": "cr-stay-jasper"
+          }
+        },
+        "2026-09-13": {
+          "dayOrdinal": 4,
+          "summary": {
+            "title": "Parkway reverse & Tunnel pause",
+            "headline": "Banff supper reward",
+            "primaryPlaceId": "plc-banff",
+            "tags": [
+              "recovery-drive"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "cr-si-401",
+              "sortOrder": 10,
+              "timeKind": "floating",
+              "timeLabel": "Morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "title": "Check-out Jasper glide southbound",
+              "detail": "Different light angle revisit small pullouts sparingly fatigue aware.",
+              "placeId": "plc-jasper",
+              "labels": [
+                "drive"
+              ]
+            },
+            {
+              "id": "cr-si-402",
+              "sortOrder": 20,
+              "timeKind": "floating",
+              "timeLabel": "Afternoon",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "title": "Icefields Centre restroom leg stretch only",
+              "detail": "Bus glacier step optional if pacing allows cash buffer.",
+              "placeId": "plc-peyto",
+              "labels": []
+            },
+            {
+              "id": "cr-si-403",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "Banff summit gondola weather hedge",
+              "detail": "Swap next morning if socked in solid.",
+              "placeId": "plc-banff",
+              "labels": []
+            }
+          ],
+          "callouts": [],
+          "modalDetailPanelId": null,
+          "bookingHighlight": null
+        },
+        "2026-09-14": {
+          "dayOrdinal": 5,
+          "summary": {
+            "title": "YYC wheels up",
+            "headline": "Banff breakfast then airport buffer",
+            "primaryPlaceId": "plc-calgary",
+            "tags": [
+              "departure"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "cr-si-501",
+              "sortOrder": 10,
+              "timeKind": "floating",
+              "timeLabel": "Morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "title": "Light Vermilion loop or café journal",
+              "detail": "Low stakes before beltline drive.",
+              "placeId": "plc-banff",
+              "labels": []
+            },
+            {
+              "id": "cr-si-502",
+              "sortOrder": 20,
+              "timeKind": "clock",
+              "timeLabel": "1:30 PM",
+              "startLocal": "13:30",
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "title": "Return rental shuttle",
+              "detail": "YYC US preclearance sometimes tight—observe airline Slack.",
+              "placeId": "plc-calgary",
+              "labels": []
+            },
+            {
+              "id": "cr-si-503",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "Depart flight placeholder",
+              "detail": "Insert gate reality when booking firms.",
+              "placeId": "plc-calgary",
+              "labels": [
+                "flight"
+              ]
+            }
+          ],
+          "callouts": [],
+          "modalDetailPanelId": null,
+          "bookingHighlight": null
+        }
+      },
+      "lodgingStays": [
+        {
+          "id": "cr-stay-banff",
+          "name": "Example lodge Banff",
+          "placeId": "plc-banff",
+          "checkInDate": "2026-09-10",
+          "checkOutDate": "2026-09-13",
+          "confirmation": "EX-RKY-BFF",
+          "bookingChannel": "Fixture",
+          "notes": [
+            "Fictitious—swap with live confirmation."
+          ]
+        },
+        {
+          "id": "cr-stay-jasper",
+          "name": "Example inn Jasper",
+          "placeId": "plc-jasper",
+          "checkInDate": "2026-09-12",
+          "checkOutDate": "2026-09-13",
+          "confirmation": "EX-RKY-JNP",
+          "bookingChannel": "Fixture",
+          "notes": [
+            "One-night parkway split fixture."
+          ]
+        }
+      ],
+      "transportSegments": [
+        {
+          "id": "cr-tr-drive-1",
+          "mode": "car",
+          "label": "Calgary Airport → Banff",
+          "date": "2026-09-10",
+          "departPlaceId": "plc-calgary",
+          "arrivePlaceId": "plc-banff",
+          "departTimeLocal": "12:45",
+          "arriveTimeLocal": "14:55",
+          "carrier": null,
+          "serviceName": "Rental sedan",
+          "seatInfo": null,
+          "confirmation": "RZDEMO992",
+          "notes": "~120 km mountain weather variability."
+        },
+        {
+          "id": "cr-tr-drive-2",
+          "mode": "car",
+          "label": "Banff ↔ Lake Louise corridor",
+          "date": "2026-09-11",
+          "departPlaceId": "plc-banff",
+          "arrivePlaceId": "plc-lakelouise",
+          "departTimeLocal": "06:15",
+          "arriveTimeLocal": "06:52",
+          "carrier": null,
+          "serviceName": "Same rental",
+          "seatInfo": null,
+          "confirmation": null,
+          "notes": "Fixture drive row."
+        }
+      ],
+      "tasks": [
+        {
+          "id": "cr-task-parkpass",
+          "title": "Load Parks Canada Discovery pass barcode wallet",
+          "status": "open",
+          "priority": "high",
+          "dueDate": "2026-09-08",
+          "dueTime": null,
+          "dueDateTime": null,
+          "notes": null,
+          "relatedDayKey": null,
+          "relatedBlockId": null,
+          "relatedPlaceId": null,
+          "logisticsId": null,
+          "destinationId": null,
+          "metadata": {
+            "sectionSlug": "logistics"
+          }
+        },
+        {
+          "id": "cr-task-snacks",
+          "title": "Icefields cooler restock oatmeal bars",
+          "status": "open",
+          "priority": "normal",
+          "dueDate": "2026-09-11",
+          "dueTime": null,
+          "dueDateTime": null,
+          "notes": null,
+          "relatedDayKey": "2026-09-12",
+          "relatedBlockId": null,
+          "relatedPlaceId": null,
+          "logisticsId": null,
+          "destinationId": null,
+          "metadata": {
+            "sectionSlug": "itinerary"
+          }
+        }
+      ],
+      "documents": [],
+      "richPanels": {
+        "cr-panel-parkway": {
+          "format": "markdown",
+          "body": "## Parkway etiquette quicklist\n\n- Pullouts use flashers early—coaches accelerate surprisingly fast egress.\n- Fuel Banff tank before Peyto—you will not casually refuel midpoint cheap.\n- Wildlife jam distance law—telephoto etiquette beats selfie proximity."
+        }
+      }
+    },
+    "extensions": {
+      "templatePath": "trip-templates/examples/canadian-rockies-5d.jsonc",
+      "fixtureNote": "Fictitious rows for TripPWA build tests."
+    }
+  },
+  "bundle": {
+    "sections": [
+      {
+        "id": "cr-o",
+        "slug": "overview",
+        "kind": "overview",
+        "title": "Overview"
+      },
+      {
+        "id": "cr-i",
+        "slug": "itinerary",
+        "kind": "itinerary",
+        "title": "Itinerary"
+      },
+      {
+        "id": "cr-l",
+        "slug": "lodging",
+        "kind": "lodging",
+        "title": "Lodging"
+      },
+      {
+        "id": "cr-t",
+        "slug": "transport",
+        "kind": "transport",
+        "title": "Transport"
+      },
+      {
+        "id": "cr-g",
+        "slug": "logistics",
+        "kind": "logistics",
+        "title": "Logistics"
+      },
+      {
+        "id": "cr-d",
+        "slug": "dining",
+        "kind": "dining",
+        "title": "Food"
+      },
+      {
+        "id": "cr-r",
+        "slug": "reference",
+        "kind": "reference",
+        "title": "Reference"
+      }
+    ],
+    "presentation": {
+      "theme": {
+        "id": "default",
+        "packVersion": "1.0.0"
+      },
+      "hero": {
+        "emoji": "🏔️",
+        "datesHtml": "✈️ Sep 10 → Sep 14 &nbsp;|&nbsp; 5 Days"
+      },
+      "themeId": "default",
+      "heroEmoji": "🏔️",
+      "heroDatesHtml": "✈️ Sep 10 → Sep 14 &nbsp;|&nbsp; 5 Days",
+      "daySegmentBands": {
+        "morning": {
+          "startMinute": 330,
+          "endMinute": 720
+        },
+        "afternoon": {
+          "startMinute": 720,
+          "endMinute": 1020
+        },
+        "evening": {
+          "startMinute": 1020,
+          "endMinute": 1290
+        },
+        "night": {
+          "wraps": true,
+          "startMinute": 1290,
+          "endMinute": 330
+        }
+      }
+    }
+  }
+}

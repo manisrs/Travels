@@ -1,0 +1,247 @@
+{
+  // =============================================================================
+  // TripTemplate v1 — annotated reference (JSONC).
+  // TripPWA and TripBuilder treat the compiled JSON as canonical; strip comments.
+  // =============================================================================
+
+  /* Semver for breaking vs additive template changes (TripPWA selects renderer). */
+  "schemaVersion": "1.0.0",
+
+  /* ------------- meta: trip identity & display spine ------------- */
+  "meta": {
+    "id": "slug-unique-per-voyage-example-lisbon-2026",
+    "title": "Human title shown in hero and install name",
+    "subtitle": "Short line under title e.g. who is traveling",
+    "tagline": "Optional evocative one-liner",
+
+    /* IANA zone for deriving calendar days and today's highlight. */
+    "defaultTimeZone": "Europe/Lisbon",
+
+    /* Inclusive ISO date bounds; validators check dayPlans keys sit inside range. */
+    "dateRange": { "start": "2026-06-13", "end": "2026-06-15" },
+
+    "travelers": ["Traveler One", "Traveler Two"],
+
+    "locale": "en-US",
+    /* Bump on publish; drafts may omit or use semantic draft-* string. */
+    "revision": 1
+  },
+
+  /* ------------- registry: deduplicated places & assets ------------- */
+  "registry": {
+    /* Stable ids referenced from day plans, lodging, transport. */
+    "places": [
+      {
+        "id": "place-example-lisbon",
+        "name": "Lisbon",
+        "locality": "Lisbon",
+        "region": "Lisbon",
+        "country": "Portugal",
+        "geo": { "lat": 38.7223, "lng": -9.1393 },
+        "externalLinks": { "mapsSearch": "https://maps.google.com/?q=Lisbon" }
+      }
+    ],
+
+    /* Optional media keys for hero or attachments (future-rich). */
+    "assets": []
+  },
+
+  /* ------------- sections: TripPWA tab / nav model (ordered) ------------- */
+  "sections": [
+    {
+      "id": "sec-overview",
+      "slug": "overview",
+      /* kind drives which content bucket/renderer to bind: */
+      /* overview | itinerary | lodging | transport | logistics | dining | reference | notes | attachments */
+      "kind": "overview",
+      "title": "Overview",
+      "subtitle": "Optional subtitle in tab chrome"
+    },
+    {
+      "id": "sec-itinerary",
+      "slug": "itinerary",
+      "kind": "itinerary",
+      "title": "Itinerary",
+      /* Itinerary section reads content.dayPlans (keys YYYY-MM-DD). */
+      "subtitle": "Day by day"
+    },
+    {
+      "id": "sec-lodging",
+      "slug": "lodging",
+      "kind": "lodging",
+      "title": "Lodging"
+    },
+    {
+      "id": "sec-transport",
+      "slug": "transport",
+      "kind": "transport",
+      "title": "Transport"
+    },
+    {
+      "id": "sec-logistics",
+      "slug": "logistics",
+      "kind": "logistics",
+      "title": "Logistics",
+      "subtitle": "Luggage passes visas"
+    },
+    {
+      "id": "sec-dining",
+      "slug": "dining",
+      "kind": "dining",
+      "title": "Food"
+    },
+    {
+      "id": "sec-reference",
+      "slug": "reference",
+      "kind": "reference",
+      "title": "Reference"
+    }
+  ],
+
+  /* ------------- presentation: theming hints (facts stay out of CSS) ------------- */
+  "presentation": {
+    /* Future: TripPWA resolves named theme presets. */
+    "themeId": "default",
+
+    "heroEmoji": "🧭",
+
+    /* Optional 24h band map in minutes-from-midnight [start,end); night may wrap via policy. */
+    /* TripPWA maps item times → morning|afternoon|evening|night for grouping UI. */
+    "daySegmentBands": {
+      "morning": { "startMinute": 330, "endMinute": 720 },
+      "afternoon": { "startMinute": 720, "endMinute": 1020 },
+      "evening": { "startMinute": 1020, "endMinute": 1290 },
+      "night": { "wraps": true, "startMinute": 1290, "endMinute": 330 }
+    }
+  },
+
+  /* ------------- content: payloads bound by section.kind + refs ------------- */
+  "content": {
+    /* Narrative bullets / FAQs before itinerary (markdown or plain strings). */
+    "overview": {
+      "introPlain": "One paragraph opener.",
+      "bullets": [
+        "Reminder one",
+        "Reminder two"
+      ]
+    },
+
+    /*
+     * dayPlans: CANONICAL map keyed by calendar date string YYYY-MM-DD.
+     * Moving a whole plan = move the object to another date key (merge policy in Builder).
+     */
+    "dayPlans": {
+      "2026-06-13": {
+        /* Badge label Trip day 1 2 … display order equals sorted keys unless overridden */
+        "dayOrdinal": 1,
+
+        /* summary: card header fields */
+        "summary": {
+          "title": "Arrival & alfama stroll",
+          "headline": "Optional longer headline string",
+          "primaryPlaceId": "place-example-lisbon",
+          "tags": ["arrival"]
+        },
+
+        /*
+         * scheduledItems: ORDERED spine within the day (sortOrder tie-break).
+         * timeKind: floating | clock | allday
+         * daySegment*: optional coarse+fine UX grouping; derivation from clock if omitted (policy).
+         * coarse ∈ morning afternoon evening night
+         * fine ∈ earlyMorning lateMorning … (open enum documented per TripPWA release)
+         */
+        "scheduledItems": [
+          {
+            "id": "si-example-001",
+            "sortOrder": 10,
+            "timeKind": "clock",
+            "timeLabel": "2:05 PM",
+            "startLocal": "14:05",
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "daySegmentFine": "earlyAfternoon",
+            "title": "Land Lisboa",
+            "detail": "Metro Aeroporto orientation",
+            "placeId": null,
+            "linkUrl": null,
+            "linkLabel": null,
+            "labels": ["flight"]
+          }
+        ],
+
+        /* callouts: high-visibility boxed notes */
+        "callouts": [
+          {
+            "id": "co-example",
+            "variant": "info",
+            "icon": "💡",
+            "body": "Buy Viva pass if using metro heavy this week."
+          }
+        ],
+
+        /* Optional pointers into content.richPanels for modal deep-dive markdown */
+        "modalDetailPanelId": null,
+
+        /* Optional pinned booking card surfaced on day */
+        "bookingHighlight": null
+      }
+      // ... remaining dates keyed same way ...
+    },
+
+    /* Cross-day lodging rows; refs registry.places and dates */
+    "lodgingStays": [
+      {
+        "id": "stay-example",
+        "name": "Example Hotel Display Name",
+        "placeId": "place-example-lisbon",
+        "checkInDate": "2026-06-13",
+        "checkOutDate": "2026-06-15",
+        "confirmation": "XYZ-EXAMPLE (fictitious)",
+        "bookingChannel": "Direct",
+        "notes": ["Late checkout requested"]
+      }
+    ],
+
+    /* Trains buses flights ferry rows; aggregator Transport tab sorts by departure */
+    "transportSegments": [
+      {
+        "id": "tr-example",
+        "mode": "metro",
+        "label": "Airport line",
+        "date": "2026-06-13",
+        "departPlaceId": null,
+        "arrivePlaceId": "place-example-lisbon",
+        "departTimeLocal": "15:10",
+        "arriveTimeLocal": "15:45",
+        "carrier": "Metropolitano",
+        "serviceName": "Red line",
+        "seatInfo": null,
+        "confirmation": null,
+        "notes": "Single ride or pass"
+      }
+    ],
+
+    /* Cross-cutting todos with optional anchors */
+    "tasks": [
+      {
+        "id": "task-example",
+        "text": "Download offline map tile pack",
+        "state": "open",
+        "priority": "normal",
+        "dueDate": "2026-06-12",
+        "anchors": { "date": null, "placeId": null, "sectionSlug": "logistics" }
+      }
+    ],
+
+    /* richPanels: markdown bodies keyed for modals or section blurbs */
+    "richPanels": {
+      "panel-example-day1": {
+        "format": "markdown",
+        "body": "## Example\n\nLong form day detail here."
+      }
+    }
+  },
+
+  /* Optional vendor-specific extension bag; TripPWA ignores unknown keys. */
+  "extensions": {}
+}

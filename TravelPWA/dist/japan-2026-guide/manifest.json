@@ -1,0 +1,19 @@
+{
+  "id": "./japan-2026-guide-pwa",
+  "name": "Japan 2026",
+  "short_name": "Japan",
+  "description": "Tokyo · Hakone · Fuji · Nagoya · Kyoto · Hiroshima · Osaka — cherry blossom itinerary, trains & hotels.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fdf8f0",
+  "theme_color": "#1a1208",
+  "icons": [
+    {
+      "src": "./assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

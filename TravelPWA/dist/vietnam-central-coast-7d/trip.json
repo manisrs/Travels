@@ -1,0 +1,742 @@
+{
+  "schemaVersion": "3.0.0",
+  "meta": {
+    "id": "vietnam-central-coast-7d",
+    "title": "Vietnam central coast drift",
+    "subtitle": "Example 7-day Hue → Đà Nẵng → Hội An",
+    "tagline": "Rivers lanterns limestone mornings",
+    "manifestDescription": "Example 7-day central Vietnam—Huế, Đà Nẵng, Hội An drift.",
+    "shortName": "VN Coast",
+    "defaultTimeZone": "Asia/Ho_Chi_Minh",
+    "dateRange": {
+      "start": "2026-03-15",
+      "end": "2026-03-21",
+      "dayCount": 7
+    },
+    "travelers": [
+      "Tester One",
+      "Tester Two"
+    ],
+    "locale": "en-US",
+    "revision": 1
+  },
+  "registry": {
+    "places": [
+      {
+        "id": "vnm-hue",
+        "name": "Huế",
+        "locality": "Huế",
+        "region": "Thừa Thiên Huế",
+        "country": "Vietnam"
+      },
+      {
+        "id": "vnm-dmz",
+        "name": "Vĩnh Mốc tunnels area",
+        "locality": "Quảng Trị",
+        "region": "Central",
+        "country": "Vietnam"
+      },
+      {
+        "id": "vnm-haivan",
+        "name": "Hải Vân Pass",
+        "locality": "Hoành Sơn",
+        "region": "Đà Nẵng boundary",
+        "country": "Vietnam"
+      },
+      {
+        "id": "vnm-danang",
+        "name": "Đà Nẵng",
+        "locality": "Đà Nẵng",
+        "region": "Đà Nẵng",
+        "country": "Vietnam"
+      },
+      {
+        "id": "vnm-hoian",
+        "name": "Hội An",
+        "locality": "Hội An",
+        "region": "Quảng Nam",
+        "country": "Vietnam"
+      },
+      {
+        "id": "vnm-myson",
+        "name": "Mỹ Sơn sanctuary",
+        "locality": "Duy Xuyên",
+        "region": "Quảng Nam",
+        "country": "Vietnam"
+      }
+    ],
+    "assets": [],
+    "logistics": []
+  },
+  "content": {
+    "overview": {
+      "introPlain": "Week-long coastal rhythm: imperial river city first, crest the pass descent into modern Đà Nẵng, then lantern nights in Hội An with a sandstone sanctuary morning before airport bounce.",
+      "bullets": [
+        "Đông Ba market cash small notes still king for fruit stalls.",
+        "Grab bike helmets variable—pack buff bandana if squeamish about loaner hygiene."
+      ]
+    },
+    "dayPlans": {
+      "2026-03-15": {
+        "dayOrdinal": 1,
+        "summary": {
+          "title": "Huế runway river breeze",
+          "headline": "Soft imperial quarter preview",
+          "primaryPlaceId": "vnm-hue",
+          "tags": [
+            "arrival"
+          ]
+        },
+        "scheduledItems": [
+          {
+            "id": "vn-si-101",
+            "sortOrder": 10,
+            "timeKind": "clock",
+            "timeLabel": "2:55 PM",
+            "startLocal": "14:55",
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "daySegmentFine": "earlyAfternoon",
+            "title": "Land Phú Bài collect bags",
+            "detail": "Taxi prepaid counter predictable—meter Grab negotiable bilingual.",
+            "placeId": "vnm-hue",
+            "labels": []
+          },
+          {
+            "id": "vn-si-102",
+            "sortOrder": 20,
+            "timeKind": "floating",
+            "timeLabel": "Late afternoon",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Hotel wedge old town fringe",
+            "detail": "Shower oscillate jetlag outward gentle walking only.",
+            "placeId": "vnm-hue",
+            "labels": []
+          },
+          {
+            "id": "vn-si-103",
+            "sortOrder": 30,
+            "timeKind": "floating",
+            "timeLabel": "Evening",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "evening",
+            "title": "Tràng Tiền bridge LED pulse",
+            "detail": "Bánh flan stroller vendors parallel riverbank.",
+            "placeId": "vnm-hue",
+            "labels": [
+              "scenic"
+            ]
+          }
+        ],
+        "callouts": [],
+        "modalDetailPanelId": null,
+        "bookingHighlight": null
+      },
+      "2026-03-16": {
+        "dayOrdinal": 2,
+        "summary": {
+          "title": "Citadel pacing river boat optional",
+          "headline": "Heritage-heavy calm breaks",
+          "primaryPlaceId": "vnm-hue",
+          "tags": [
+            "culture"
+          ]
+        },
+        "scheduledItems": [
+          {
+            "id": "vn-si-201",
+            "sortOrder": 10,
+            "timeKind": "floating",
+            "timeLabel": "Morning",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "title": "Imperial enclosure north axis",
+            "detail": "Hire succinct guide two hours—or audioguide pacing slow.",
+            "placeId": "vnm-hue",
+            "labels": []
+          },
+          {
+            "id": "vn-si-202",
+            "sortOrder": 20,
+            "timeKind": "floating",
+            "timeLabel": "Midday heat recess",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Café shade Đặng Trần Côn strip",
+            "detail": "Coconut coffee trial—sweet tooth calibration.",
+            "placeId": "vnm-hue",
+            "labels": [
+              "dining"
+            ]
+          },
+          {
+            "id": "vn-si-203",
+            "sortOrder": 30,
+            "timeKind": "floating",
+            "timeLabel": "Late afternoon",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Thiên Mụ slope gentle",
+            "detail": "Seven-story pagoda breeze hedge photo patience.",
+            "placeId": "vnm-hue",
+            "labels": [
+              "scenic"
+            ]
+          },
+          {
+            "id": "vn-si-204",
+            "sortOrder": 40,
+            "timeKind": "floating",
+            "timeLabel": "Night",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "night",
+            "title": "Abdominal moderation street grill",
+            "detail": "Chili discretion tomorrow early train.",
+            "placeId": "vnm-hue",
+            "labels": [
+              "dining"
+            ]
+          }
+        ],
+        "callouts": [
+          {
+            "id": "vn-co-h",
+            "variant": "info",
+            "icon": "☀️",
+            "body": "March humidity spikes midday—sightsee before eleven or after three when possible."
+          }
+        ],
+        "modalDetailPanelId": null,
+        "bookingHighlight": null
+      },
+      "2026-03-17": {
+        "dayOrdinal": 3,
+        "summary": {
+          "title": "Đông Hà skim or pass sprint",
+          "headline": "Coastal reel-in Đà Nẵng",
+          "primaryPlaceId": "vnm-dmz",
+          "tags": [
+            "transit",
+            "optional-excursion"
+          ]
+        },
+        "scheduledItems": [
+          {
+            "id": "vn-si-301",
+            "sortOrder": 10,
+            "timeKind": "floating",
+            "timeLabel": "Morning fork",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "title": "Either tunnels field day OR sleeper late breakfast",
+            "detail": "DMZ emotionally heavy budget extra three hours pivot.",
+            "placeId": "vnm-dmz",
+            "labels": []
+          },
+          {
+            "id": "vn-si-302",
+            "sortOrder": 20,
+            "timeKind": "floating",
+            "timeLabel": "Midday shuttle",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Private car crest Hải Vân",
+            "detail": "Photo stops bay overlook cloud drama variable.",
+            "placeId": "vnm-haivan",
+            "labels": [
+              "scenic",
+              "drive"
+            ]
+          },
+          {
+            "id": "vn-si-303",
+            "sortOrder": 30,
+            "timeKind": "floating",
+            "timeLabel": "Evening",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "evening",
+            "title": "Đà Nẵng beach sundown skim",
+            "detail": "Mỹ Khê mellow surf watch—sand grit honest.",
+            "placeId": "vnm-danang",
+            "labels": []
+          }
+        ],
+        "callouts": [],
+        "modalDetailPanelId": null,
+        "bookingHighlight": {
+          "type": "transport",
+          "refId": "vn-tr-pass"
+        }
+      },
+      "2026-03-18": {
+        "dayOrdinal": 4,
+        "summary": {
+          "title": "Đà Nẵng marble mornings",
+          "headline": "Elevation coffee afternoon admin",
+          "primaryPlaceId": "vnm-danang",
+          "tags": [
+            "light-hike"
+          ]
+        },
+        "scheduledItems": [
+          {
+            "id": "vn-si-401",
+            "sortOrder": 10,
+            "timeKind": "floating",
+            "timeLabel": "Morning",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "title": "Marble ridges west cluster",
+            "detail": "Water bottle aggressive—shade lottery limestone.",
+            "placeId": "vnm-danang",
+            "labels": []
+          },
+          {
+            "id": "vn-si-402",
+            "sortOrder": 20,
+            "timeKind": "floating",
+            "timeLabel": "Afternoon",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Coffee omni rooftop AC recovery",
+            "detail": "Sim card top-up errands cluster same district.",
+            "placeId": "vnm-danang",
+            "labels": []
+          },
+          {
+            "id": "vn-si-403",
+            "sortOrder": 30,
+            "timeKind": "floating",
+            "timeLabel": "Evening",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "evening",
+            "title": "Seafood avenue negotiation calm",
+            "detail": "Weigh-live tanks transparency ask gentle.",
+            "placeId": "vnm-danang",
+            "labels": [
+              "dining"
+            ]
+          }
+        ],
+        "callouts": [],
+        "modalDetailPanelId": null,
+        "bookingHighlight": null
+      },
+      "2026-03-19": {
+        "dayOrdinal": 5,
+        "summary": {
+          "title": "Hội An silk lantern maze",
+          "headline": "Tailor pacing river dusk",
+          "primaryPlaceId": "vnm-hoian",
+          "tags": [
+            "old-town"
+          ]
+        },
+        "scheduledItems": [
+          {
+            "id": "vn-si-501",
+            "sortOrder": 10,
+            "timeKind": "floating",
+            "timeLabel": "Morning",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "title": "Bike hotel loop rice paddies east",
+            "detail": "Photography tripod ferry fields calm.",
+            "placeId": "vnm-hoian",
+            "labels": []
+          },
+          {
+            "id": "vn-si-502",
+            "sortOrder": 20,
+            "timeKind": "floating",
+            "timeLabel": "Afternoon indoor",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Silk workshop demo optional",
+            "detail": "Sales pressure polite decline rehearse.",
+            "placeId": "vnm-hoian",
+            "labels": []
+          },
+          {
+            "id": "vn-si-503",
+            "sortOrder": 30,
+            "timeKind": "floating",
+            "timeLabel": "Evening",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "evening",
+            "title": "Old town ticket lantern hour",
+            "detail": "Bridge churn patience—telephoto compression magic.",
+            "placeId": "vnm-hoian",
+            "labels": [
+              "scenic"
+            ]
+          },
+          {
+            "id": "vn-si-504",
+            "sortOrder": 40,
+            "timeKind": "floating",
+            "timeLabel": "Night",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "night",
+            "title": "Rooftop mocktail decompress",
+            "detail": "Early next archaeological heat.",
+            "placeId": "vnm-hoian",
+            "labels": [
+              "dining"
+            ]
+          }
+        ],
+        "callouts": [],
+        "modalDetailPanelId": "vn-panel-hoian",
+        "bookingHighlight": null
+      },
+      "2026-03-20": {
+        "dayOrdinal": 6,
+        "summary": {
+          "title": "Mỹ Sơn blush sandstone",
+          "headline": "Half-day sanctuary return tailoring pickup",
+          "primaryPlaceId": "vnm-myson",
+          "tags": [
+            "heritage-halfday"
+          ]
+        },
+        "scheduledItems": [
+          {
+            "id": "vn-si-601",
+            "sortOrder": 10,
+            "timeKind": "floating",
+            "timeLabel": "Early morning",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "daySegmentFine": "earlyMorning",
+            "title": "Shuttle sanctuary choreography",
+            "detail": "Cham dance slot timing confirm ticket stub.",
+            "placeId": "vnm-myson",
+            "labels": []
+          },
+          {
+            "id": "vn-si-602",
+            "sortOrder": 20,
+            "timeKind": "floating",
+            "timeLabel": "Mid-morning ruins loop",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "title": "Groups beat strategy inner clusters first",
+            "detail": "Sun angle harsh fast—expose bracket discipline.",
+            "placeId": "vnm-myson",
+            "labels": [
+              "scenic"
+            ]
+          },
+          {
+            "id": "vn-si-603",
+            "sortOrder": 30,
+            "timeKind": "floating",
+            "timeLabel": "Afternoon free",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Tailor fitting buffer second pass",
+            "detail": "Tea escape humidity indoor.",
+            "placeId": "vnm-hoian",
+            "labels": []
+          },
+          {
+            "id": "vn-si-604",
+            "sortOrder": 40,
+            "timeKind": "floating",
+            "timeLabel": "Evening gentle",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "evening",
+            "title": "Cooking class optional mellow",
+            "detail": "Book ahead fixture slot placeholder.",
+            "placeId": "vnm-hoian",
+            "labels": [
+              "dining"
+            ]
+          }
+        ],
+        "callouts": [],
+        "modalDetailPanelId": null,
+        "bookingHighlight": null
+      },
+      "2026-03-21": {
+        "dayOrdinal": 7,
+        "summary": {
+          "title": "Đà Nẵng runway closure",
+          "headline": "Short beach goodbye buffer",
+          "primaryPlaceId": "vnm-danang",
+          "tags": [
+            "departure"
+          ]
+        },
+        "scheduledItems": [
+          {
+            "id": "vn-si-701",
+            "sortOrder": 10,
+            "timeKind": "floating",
+            "timeLabel": "Morning",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "title": "Coffee repeat favorite district",
+            "detail": "Final đồng coin burn souvenir fridge magnet kitsch.",
+            "placeId": "vnm-danang",
+            "labels": []
+          },
+          {
+            "id": "vn-si-702",
+            "sortOrder": 20,
+            "timeKind": "clock",
+            "timeLabel": "11:20 AM",
+            "startLocal": "11:20",
+            "endLocal": null,
+            "daySegmentCoarse": "morning",
+            "title": "DAD check-in internationally",
+            "detail": "Queue variance—fixtures replace flight text later.",
+            "placeId": "vnm-danang",
+            "labels": [
+              "flight"
+            ]
+          },
+          {
+            "id": "vn-si-703",
+            "sortOrder": 30,
+            "timeKind": "floating",
+            "timeLabel": "Afternoon hub",
+            "startLocal": null,
+            "endLocal": null,
+            "daySegmentCoarse": "afternoon",
+            "title": "Connection placeholder SGNN or ICN pivot",
+            "detail": "Insert airline truth when ticketing firms.",
+            "placeId": "vnm-danang",
+            "labels": [
+              "flight"
+            ]
+          }
+        ],
+        "callouts": [
+          {
+            "id": "vn-co-flight",
+            "variant": "ok",
+            "icon": "✈️",
+            "body": "International departures fingerprint variance—carry pen immigration card spare."
+          }
+        ],
+        "modalDetailPanelId": null,
+        "bookingHighlight": null
+      }
+    },
+    "lodgingStays": [
+      {
+        "id": "vn-stay-hue",
+        "name": "Example riverside Hue",
+        "placeId": "vnm-hue",
+        "checkInDate": "2026-03-15",
+        "checkOutDate": "2026-03-17",
+        "confirmation": "EX-VNM-HUI",
+        "bookingChannel": "Fixture",
+        "notes": []
+      },
+      {
+        "id": "vn-stay-danang",
+        "name": "Example beach tower Đà Nẵng",
+        "placeId": "vnm-danang",
+        "checkInDate": "2026-03-17",
+        "checkOutDate": "2026-03-19",
+        "confirmation": "EX-VNM-DAD",
+        "bookingChannel": "Fixture",
+        "notes": []
+      },
+      {
+        "id": "vn-stay-hoian",
+        "name": "Example old-town lane hotel",
+        "placeId": "vnm-hoian",
+        "checkInDate": "2026-03-19",
+        "checkOutDate": "2026-03-21",
+        "confirmation": "EX-VNM-HOI",
+        "bookingChannel": "Fixture",
+        "notes": [
+          "Two nights lanterns core fixture."
+        ]
+      }
+    ],
+    "transportSegments": [
+      {
+        "id": "vn-tr-pass",
+        "mode": "car",
+        "label": "Huế → Đà Nẵng private car Hai Van",
+        "date": "2026-03-17",
+        "departPlaceId": "vnm-hue",
+        "arrivePlaceId": "vnm-danang",
+        "departTimeLocal": "10:00",
+        "arriveTimeLocal": "13:35",
+        "carrier": null,
+        "serviceName": "Fixture car charter",
+        "seatInfo": null,
+        "confirmation": "DRVNM7781",
+        "notes": "Stops Pey pass viewpoint negotiable fixture."
+      },
+      {
+        "id": "vn-tr-hoian-shuttle",
+        "mode": "shuttle",
+        "label": "Đà Nẵng ↔ Hội An hotel shuttle",
+        "date": "2026-03-19",
+        "departPlaceId": "vnm-danang",
+        "arrivePlaceId": "vnm-hoian",
+        "departTimeLocal": "09:30",
+        "arriveTimeLocal": "10:05",
+        "carrier": "Fixture resort",
+        "serviceName": "Complimentary stagger",
+        "seatInfo": null,
+        "confirmation": null,
+        "notes": "Replace with shuttle truth."
+      }
+    ],
+    "tasks": [
+      {
+        "id": "vn-task-visa",
+        "title": "Verify e-visa printout two paper copies hydrate folder",
+        "status": "open",
+        "priority": "high",
+        "dueDate": "2026-03-10",
+        "dueTime": null,
+        "dueDateTime": null,
+        "notes": null,
+        "relatedDayKey": null,
+        "relatedBlockId": null,
+        "relatedPlaceId": null,
+        "logisticsId": null,
+        "destinationId": null,
+        "metadata": {
+          "sectionSlug": "logistics"
+        }
+      },
+      {
+        "id": "vn-task-tailor",
+        "title": "Second fitting window Mar 20 15:30 placeholder",
+        "status": "open",
+        "priority": "normal",
+        "dueDate": "2026-03-20",
+        "dueTime": null,
+        "dueDateTime": null,
+        "notes": null,
+        "relatedDayKey": "2026-03-20",
+        "relatedBlockId": null,
+        "relatedPlaceId": "vnm-hoian",
+        "logisticsId": null,
+        "destinationId": null,
+        "metadata": {
+          "sectionSlug": "itinerary"
+        }
+      }
+    ],
+    "documents": [],
+    "richPanels": {
+      "vn-panel-hoian": {
+        "format": "markdown",
+        "body": "## Lantern density tactics\n\n- Ticket booth queues spike 17:45–18:30—carry small exact đồng.\n- Cầu Pagoda midpoint irreversible bottleneck—upstream bridge lesser known still frames.\n- Tripod polite low—or long exposure handheld IBIS trust."
+      }
+    }
+  },
+  "extensions": {
+    "templatePath": "trip-templates/examples/vietnam-central-coast-7d.jsonc",
+    "fixtureNote": "Fictitious rows for TripPWA build tests."
+  },
+  "sections": [
+    {
+      "id": "vn-o",
+      "slug": "overview",
+      "kind": "overview",
+      "title": "Overview"
+    },
+    {
+      "id": "vn-i",
+      "slug": "itinerary",
+      "kind": "itinerary",
+      "title": "Itinerary"
+    },
+    {
+      "id": "vn-l",
+      "slug": "lodging",
+      "kind": "lodging",
+      "title": "Lodging"
+    },
+    {
+      "id": "vn-t",
+      "slug": "transport",
+      "kind": "transport",
+      "title": "Transport"
+    },
+    {
+      "id": "vn-g",
+      "slug": "logistics",
+      "kind": "logistics",
+      "title": "Logistics"
+    },
+    {
+      "id": "vn-d",
+      "slug": "dining",
+      "kind": "dining",
+      "title": "Food"
+    },
+    {
+      "id": "vn-r",
+      "slug": "reference",
+      "kind": "reference",
+      "title": "Reference"
+    }
+  ],
+  "presentation": {
+    "theme": {
+      "id": "default",
+      "packVersion": "1.0.0"
+    },
+    "hero": {
+      "emoji": "🏮",
+      "datesHtml": "✈️ Mar 15 → Mar 21 &nbsp;|&nbsp; 7 Days"
+    },
+    "themeId": "default",
+    "heroEmoji": "🏮",
+    "heroDatesHtml": "✈️ Mar 15 → Mar 21 &nbsp;|&nbsp; 7 Days",
+    "daySegmentBands": {
+      "morning": {
+        "startMinute": 330,
+        "endMinute": 720
+      },
+      "afternoon": {
+        "startMinute": 720,
+        "endMinute": 1020
+      },
+      "evening": {
+        "startMinute": 1020,
+        "endMinute": 1290
+      },
+      "night": {
+        "wraps": true,
+        "startMinute": 1290,
+        "endMinute": 330
+      }
+    }
+  }
+}

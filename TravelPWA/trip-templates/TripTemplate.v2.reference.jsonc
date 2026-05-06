@@ -1,0 +1,320 @@
+{
+  // =============================================================================
+  // TripTemplate v2 — annotated reference (JSONC).
+  // Superset of v1: render modes, theme packages, palette overrides, section
+  // bindings, and typed day blocks. TripPWA selects behavior via schemaVersion +
+  // content.renderMode (+ presentation.theme.id for asset bundles).
+  // Strip comments for strict JSON; validate with a v2 JSON Schema when added.
+  // =============================================================================
+
+  "schemaVersion": "2.0.0",
+
+  /* ------------- meta ------------- */
+  "meta": {
+    "id": "example-trip-slug-2026",
+    "title": "Trip title (hero + manifest name)",
+    "subtitle": "Travelers · vibe",
+    "tagline": "Optional one-liner",
+
+    /* PWA / install strings (optional; build may derive from title) */
+    "manifestDescription": "One-line store-style description.",
+    "shortName": "Short",
+
+    "defaultTimeZone": "Asia/Tokyo",
+    "dateRange": {
+      "start": "2026-03-26",
+      "end": "2026-04-07",
+      /* Optional denormalization for badges */
+      "dayCount": 12
+    },
+
+    "travelers": ["A", "B"],
+    "locale": "en-US",
+    "revision": 1
+
+    /* RESERVED — add comma above when uncommenting:
+     * Future: semantic destination tags for search / defaults (non-breaking):
+     * "destination": { "primaryPlaceId": "place-xyz", "regionCodes": ["JP-13"] }
+     */
+  },
+
+  /* ------------- registry (unchanged from v1) ------------- */
+  "registry": {
+    "places": [
+      {
+        "id": "place-example-tokyo",
+        "name": "Tokyo",
+        "locality": "Tokyo",
+        "region": "Tokyo",
+        "country": "Japan",
+        "geo": { "lat": 35.6762, "lng": 139.6503 },
+        "externalLinks": { "mapsSearch": "https://maps.google.com/?q=Tokyo" }
+      }
+    ],
+    "assets": []
+  },
+
+  /* ------------- sections: nav spine + optional content binding ------------- */
+  "sections": [
+    {
+      "id": "sec-itinerary",
+      "slug": "itinerary",
+      "kind": "itinerary",
+      "title": "Itinerary",
+      /*
+       * contentBinding tells the renderer where this tab's body comes from.
+       * Omitted ⇒ default for kind + renderMode (e.g. structured dayPlans).
+       */
+      "contentBinding": {
+        "mode": "verbatimFragment",
+        /* Key into content.verbatim.fragments (trip-specific; Japan used dayCards inline) */
+        "fragmentGroup": "dayCards"
+      }
+    },
+    {
+      "id": "sec-trains",
+      "slug": "trains",
+      "kind": "transport",
+      "title": "Trains",
+      "contentBinding": {
+        "mode": "verbatimFragment",
+        "fragmentKey": "trainsTabInner"
+      }
+    },
+    {
+      "id": "sec-hotels",
+      "slug": "hotels",
+      "kind": "lodging",
+      "title": "Hotels",
+      "contentBinding": {
+        "mode": "verbatimFragment",
+        "fragmentKey": "hotelsTabInner"
+      }
+    },
+    {
+      "id": "sec-luggage",
+      "slug": "luggage",
+      "kind": "logistics",
+      "title": "Luggage",
+      "contentBinding": {
+        "mode": "verbatimFragment",
+        "fragmentKey": "luggageTabInner"
+      }
+    },
+    {
+      "id": "sec-food",
+      "slug": "food",
+      "kind": "dining",
+      "title": "Food",
+      "contentBinding": {
+        "mode": "verbatimFragment",
+        "fragmentKey": "foodTabInner"
+      }
+    }
+  ],
+
+  /* ------------- presentation: theme package + optional token overrides ------------- */
+  "presentation": {
+    /*
+     * theme.id resolves at build time to a folder or npm-like package:
+     * e.g. src/themes/<id>/ (styles.css, app.js optional).
+     * v1 used flat "themeId" — treat that as synonym of theme.id for migration.
+     */
+    "theme": {
+      "id": "japan-2026",
+      /* Optional semver range for reproducible builds */
+      "packVersion": "1.0.0"
+    },
+
+    /*
+     * Optional semantic colors → mapped to CSS variables by the theme
+     * (preferred over scattering hex inside HTML fragments).
+     */
+    "palette": {
+      "accent": "#c0392b",
+      "accentMuted": "#fdecea",
+      "positive": "#4a6741",
+      "positiveMuted": "#edf7ed",
+      "warning": "#8c5a00",
+      "warningMuted": "#fff8e1",
+      "surface": "#fffaf5",
+      "text": "#1a1a1a"
+    },
+
+    /*
+     * Optional named chip / tag semantics for structured renders
+     * (themes map these to palette keys).
+     */
+    "semanticTagStyles": {
+      "cherry": { "paletteKey": "accentMuted", "textPaletteKey": "accent" },
+      "unmissable": { "paletteKey": "positiveMuted", "textPaletteKey": "positive" }
+    },
+
+    "hero": {
+      "emoji": "🌸",
+      /* Trustworthy HTML snippets only (build sanitizes if policy requires) */
+      "datesHtml": "✈️ Mar 26 → Apr 7 &nbsp;|&nbsp; 12 Days"
+    },
+
+    "heroEmoji": "🌸",
+
+    /*
+     * v1-compatible: coarse time bands for grouping structured scheduledItems.
+     */
+    "daySegmentBands": {
+      "morning": { "startMinute": 330, "endMinute": 720 },
+      "afternoon": { "startMinute": 720, "endMinute": 1020 },
+      "evening": { "startMinute": 1020, "endMinute": 1290 },
+      "night": { "wraps": true, "startMinute": 1290, "endMinute": 330 }
+    }
+  },
+
+  /* ------------- content ------------- */
+  "content": {
+    /*
+     * structured — default TripPWA path: dayPlans, lodgingStays, transportSegments…
+     * verbatimFragments — body HTML (or other format) lives in content.verbatim.fragments
+     * hybrid — both; renderer picks per section via contentBinding
+     */
+    "renderMode": "hybrid",
+
+    /* --- Verbatim path (generalizes v1 content.verbatimJapan) --- */
+    "verbatim": {
+      "format": "html",
+      "version": 1,
+      /*
+       * Identifies the extractor / HTML convention set.
+       * Japan: populated by extract-japan-html.mjs from Japan2026-Guide.html
+       */
+      "extractorProfileId": "japan-guide-html-v1",
+      "conventions": {
+        "dayCardSelector": ".day-card",
+        "dayCardToneClassPrefix": "c-",
+        "tabPanelIdPattern": "tab-{slug}",
+        "modalOverlayClass": "modal-overlay"
+      },
+      /*
+       * Flat string map (HTML). Keys are contract between extractor and theme renderer.
+       * Japan v1 used: dayCards map, itineraryChipsRowInner, *TabInner, modals map.
+       */
+      "fragments": {
+        "dayCards": {
+          "day-1": "<!-- full <div class=\"day-card\" …> … </div> from extractor -->"
+        },
+        "itineraryChipsRowInner": "<!-- inline HTML for chip row -->",
+        "trainsTabInner": "<!-- full #tab-trains.section panel; do not double-wrap in renderer -->",
+        "hotelsTabInner": "<!-- ... -->",
+        "luggageTabInner": "<!-- ... -->",
+        "foodTabInner": "<!-- ... -->",
+        "modals": {
+          "m1": "<!-- full modal overlay HTML -->"
+        }
+      }
+    },
+
+    /* --- Structured path (same spirit as v1; v2 adds typed day blocks) --- */
+    "overview": {
+      "introPlain": "Opener.",
+      "bullets": ["Tip one"]
+    },
+
+    /*
+     * dayPlans keyed by YYYY-MM-DD. v2: optional "blocks" array as discriminated
+     * union (type field). scheduledItems remain for backward compatibility.
+     */
+    "dayPlans": {
+      "2026-06-13": {
+        "dayOrdinal": 1,
+        "summary": {
+          "title": "Arrival day",
+          "headline": null,
+          "primaryPlaceId": "place-example-tokyo",
+          "tags": ["arrival"]
+        },
+
+        /*
+         * Ordered mixed content: activities, rich callouts, booking stripes, etc.
+         * JSON Schema: oneOf on "type".
+         */
+        "blocks": [
+          {
+            "type": "activity",
+            "id": "blk-act-001",
+            "sortOrder": 10,
+            "timeKind": "clock",
+            "timeLabel": "4:00 PM",
+            "startLocal": "16:00",
+            "endLocal": null,
+            "title": "Land at NRT",
+            "detail": "Immigration, Suica setup",
+            "placeId": null,
+            "linkUrl": null,
+            "linkLabel": null,
+            "labels": ["flight"],
+            "tagSemantics": ["cherry"]
+          },
+          {
+            "type": "callout",
+            "id": "blk-co-001",
+            "sortOrder": 20,
+            "variant": "danger",
+            "icon": "⚡",
+            "title": null,
+            "body": "Must-do: link Suica to SmartEX."
+          },
+          {
+            "type": "railSegment",
+            "id": "blk-rail-001",
+            "sortOrder": 15,
+            "bookingChannel": "smartex",
+            "reservationLabel": "Reservn #2003",
+            "routeLabel": "Odawara → Nagoya",
+            "serviceName": "Hikari 653",
+            "departTimeLocal": "18:07",
+            "arriveTimeLocal": "19:14",
+            "seatInfo": "Car 9 · 9-C/D",
+            "notes": null
+          },
+          {
+            "type": "lodgingStripe",
+            "id": "blk-hotel-001",
+            "sortOrder": 25,
+            "name": "Marriott Nagoya",
+            "checkInDate": "2026-04-01",
+            "checkOutDate": "2026-04-02",
+            "metaLine": "CHASE BOOKING",
+            "placeId": null
+          },
+          {
+            "type": "luggageAlert",
+            "id": "blk-lg-001",
+            "sortOrder": 30,
+            "title": "Ship luggage this morning",
+            "description": "Drop at bell desk; arrives Apr 2 in Kyoto."
+          }
+        ],
+
+        /* v1-style row model; builders may mirror blocks or migrate one-way */
+        "scheduledItems": [],
+
+        "callouts": [],
+        "modalDetailPanelId": null,
+        "bookingHighlight": null
+      }
+    },
+
+    "lodgingStays": [],
+    "transportSegments": [],
+    "tasks": [],
+    "richPanels": {}
+  },
+
+  /*
+   * Provenance and tooling; TripPWA may ignore.
+   * v1 Japan used content.verbatimJapan + extensions — v2 prefers content.verbatim + meta here.
+   */
+  "extensions": {
+    "sourceArtifact": "Japan2026-Guide.html",
+    "assembleScript": "scripts/assemble-japan-guide.mjs"
+  }
+}

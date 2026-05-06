@@ -1,0 +1,475 @@
+{
+  "schemaVersion": "3.0.0",
+  "core": {
+    "meta": {
+      "id": "lisbon-long-weekend-3d",
+      "title": "Lisbon long weekend",
+      "subtitle": "Example 3-day city break",
+      "tagline": "Tiles trams custard tarts coastal light",
+      "manifestDescription": "Example 3-day Lisbon city break—Alfama, Belém, Sintra loop.",
+      "shortName": "Lisbon",
+      "defaultTimeZone": "Europe/Lisbon",
+      "dateRange": {
+        "start": "2026-06-13",
+        "end": "2026-06-15",
+        "dayCount": 3
+      },
+      "travelers": [
+        "Tester One",
+        "Tester Two"
+      ],
+      "locale": "en-US",
+      "revision": 1
+    },
+    "registry": {
+      "places": [
+        {
+          "id": "pls-lisbon",
+          "name": "Lisbon",
+          "locality": "Lisbon",
+          "region": "Lisbon",
+          "country": "Portugal",
+          "geo": {
+            "lat": 38.7223,
+            "lng": -9.1393
+          }
+        },
+        {
+          "id": "pls-alfama",
+          "name": "Alfama",
+          "locality": "Lisbon",
+          "region": "Lisbon",
+          "country": "Portugal"
+        },
+        {
+          "id": "pls-belem",
+          "name": "Belém",
+          "locality": "Lisbon",
+          "region": "Lisbon",
+          "country": "Portugal"
+        },
+        {
+          "id": "pls-sintra",
+          "name": "Sintra",
+          "locality": "Sintra",
+          "region": "Lisbon",
+          "country": "Portugal"
+        }
+      ],
+      "assets": [],
+      "logistics": []
+    },
+    "content": {
+      "overview": {
+        "introPlain": "Compact three-day loop: arrive straight into the old quarter, spend a full day west toward Belém, then a hill-town escape to Sintra before a short final morning in Baixa–Chiado.",
+        "bullets": [
+          "Carry light layers; Atlantic evenings stay cool even in June.",
+          "Book Sintra palace entries online to skip the longest ticket lines."
+        ]
+      },
+      "dayPlans": {
+        "2026-06-13": {
+          "dayOrdinal": 1,
+          "summary": {
+            "title": "Arrive & Alfama golden hour",
+            "headline": "Check-in then miradouro hop",
+            "primaryPlaceId": "pls-alfama",
+            "tags": [
+              "arrival",
+              "walking"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "lis-si-101",
+              "sortOrder": 10,
+              "timeKind": "floating",
+              "timeLabel": "Mid-afternoon",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "daySegmentFine": "earlyAfternoon",
+              "title": "Land & metro to Chiado/Baixa",
+              "detail": "Aeroporto → Aeroporto–Saldanha (Red); short walk or taxi to hotel zone.",
+              "placeId": "pls-lisbon",
+              "labels": [
+                "transit"
+              ]
+            },
+            {
+              "id": "lis-si-102",
+              "sortOrder": 20,
+              "timeKind": "floating",
+              "timeLabel": "Late afternoon",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "daySegmentFine": "lateAfternoon",
+              "title": "Check-in & decompress",
+              "detail": "Unpack twenty minutes—then daylight is still useful for viewpoints.",
+              "placeId": "pls-lisbon",
+              "labels": []
+            },
+            {
+              "id": "lis-si-103",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "Stroll Sé → Miradouro da Senhora do Monte",
+              "detail": "Steep lanes; pause for sunset over the Tagus.",
+              "placeId": "pls-alfama",
+              "labels": [
+                "scenic"
+              ]
+            },
+            {
+              "id": "lis-si-104",
+              "sortOrder": 40,
+              "timeKind": "floating",
+              "timeLabel": "Night",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "night",
+              "title": "Dinner fado-lite or quiet tasca",
+              "detail": "Book ahead Friday–Saturday; otherwise queue early.",
+              "placeId": "pls-alfama",
+              "labels": [
+                "dining"
+              ]
+            }
+          ],
+          "callouts": [
+            {
+              "id": "lis-co-1",
+              "variant": "info",
+              "icon": "🎫",
+              "body": "Store a NFC transit card setup before rush hour—you will tap buses trams metro interchanges endlessly."
+            }
+          ],
+          "modalDetailPanelId": "lis-panel-day1",
+          "bookingHighlight": null
+        },
+        "2026-06-14": {
+          "dayOrdinal": 2,
+          "summary": {
+            "title": "Belém custard-and-marine loop",
+            "headline": "Monuments custard riverfront",
+            "primaryPlaceId": "pls-belem",
+            "tags": [
+              "monuments"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "lis-si-201",
+              "sortOrder": 10,
+              "timeKind": "floating",
+              "timeLabel": "Morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "daySegmentFine": "lateMorning",
+              "title": "Tram 15E or bus toward Belém",
+              "detail": "Expect weekend crowds; go early for Jerónimos tight interior photos.",
+              "placeId": "pls-belem",
+              "labels": [
+                "transit"
+              ]
+            },
+            {
+              "id": "lis-si-202",
+              "sortOrder": 20,
+              "timeKind": "allday",
+              "timeLabel": "Midday",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "title": "Tower + monument exteriors",
+              "detail": "Maritime museum optional if heat spikes—AC recover.",
+              "placeId": "pls-belem",
+              "labels": []
+            },
+            {
+              "id": "lis-si-203",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Afternoon",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "daySegmentFine": "earlyAfternoon",
+              "title": "Pastéis de Belém seated service",
+              "detail": "Counter is fast; salon is slower calmer—both valid.",
+              "placeId": "pls-belem",
+              "labels": [
+                "dining"
+              ]
+            },
+            {
+              "id": "lis-si-204",
+              "sortOrder": 40,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "MAAT exterior walk or Docas dock drink",
+              "detail": "Sunset light on the bridge from the promenade.",
+              "placeId": "pls-belem",
+              "labels": [
+                "scenic"
+              ]
+            }
+          ],
+          "callouts": [],
+          "modalDetailPanelId": null,
+          "bookingHighlight": null
+        },
+        "2026-06-15": {
+          "dayOrdinal": 3,
+          "summary": {
+            "title": "Sintra morning & depart",
+            "headline": "Palace ridge then airport",
+            "primaryPlaceId": "pls-sintra",
+            "tags": [
+              "day-trip",
+              "departure"
+            ]
+          },
+          "scheduledItems": [
+            {
+              "id": "lis-si-301",
+              "sortOrder": 10,
+              "timeKind": "clock",
+              "timeLabel": "8:10 AM",
+              "startLocal": "08:10",
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "daySegmentFine": "earlyMorning",
+              "title": "Rossio rail to Sintra",
+              "detail": "40-minute hop; first bus up the ridge beats rental-car restrictions.",
+              "placeId": "pls-lisbon",
+              "labels": [
+                "transit"
+              ]
+            },
+            {
+              "id": "lis-si-302",
+              "sortOrder": 20,
+              "timeKind": "floating",
+              "timeLabel": "Late morning",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "morning",
+              "title": "Pena circuit exterior + Moorish walls photo pass",
+              "detail": "Skip interior second passes if time tight—gardens still deliver drama.",
+              "placeId": "pls-sintra",
+              "labels": [
+                "scenic"
+              ]
+            },
+            {
+              "id": "lis-si-303",
+              "sortOrder": 30,
+              "timeKind": "floating",
+              "timeLabel": "Afternoon",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "afternoon",
+              "title": "Return train & hotel shower buffer",
+              "detail": "Buffer ninety minutes before airport run.",
+              "placeId": "pls-lisbon",
+              "labels": []
+            },
+            {
+              "id": "lis-si-304",
+              "sortOrder": 40,
+              "timeKind": "floating",
+              "timeLabel": "Evening",
+              "startLocal": null,
+              "endLocal": null,
+              "daySegmentCoarse": "evening",
+              "title": "Flight home",
+              "detail": "Example placeholder time—replace with live booking.",
+              "placeId": "pls-lisbon",
+              "labels": [
+                "flight"
+              ]
+            }
+          ],
+          "callouts": [
+            {
+              "id": "lis-co-3",
+              "variant": "warn",
+              "icon": "⏱️",
+              "body": "Sintra microclimate runs 5–8°C cooler than Lisbon—wind shell in the pack."
+            }
+          ],
+          "modalDetailPanelId": null,
+          "bookingHighlight": null
+        }
+      },
+      "lodgingStays": [
+        {
+          "id": "lis-stay-1",
+          "name": "Example stay Baixa–Chiado",
+          "placeId": "pls-lisbon",
+          "checkInDate": "2026-06-13",
+          "checkOutDate": "2026-06-15",
+          "confirmation": "EX-LIS-DEMO",
+          "bookingChannel": "Fixture",
+          "notes": [
+            "Fictitious row for TripPWA build tests."
+          ]
+        }
+      ],
+      "transportSegments": [
+        {
+          "id": "lis-tr-air",
+          "mode": "flight",
+          "label": "Outbound placeholder",
+          "date": "2026-06-13",
+          "departPlaceId": null,
+          "arrivePlaceId": "pls-lisbon",
+          "departTimeLocal": "11:45",
+          "arriveTimeLocal": "13:05",
+          "carrier": "Example Air",
+          "serviceName": "EX204",
+          "seatInfo": null,
+          "confirmation": "XB77PQ",
+          "notes": "Replace with operational flight record."
+        }
+      ],
+      "tasks": [
+        {
+          "id": "lis-task-1",
+          "title": "Confirm Sintra palace slot before travel week",
+          "status": "open",
+          "priority": "high",
+          "dueDate": "2026-06-10",
+          "dueTime": null,
+          "dueDateTime": null,
+          "notes": null,
+          "relatedDayKey": null,
+          "relatedBlockId": null,
+          "relatedPlaceId": "pls-sintra",
+          "logisticsId": null,
+          "destinationId": null,
+          "metadata": {
+            "sectionSlug": "itinerary"
+          }
+        },
+        {
+          "id": "lis-task-2",
+          "title": "Screenshot metro zone map offline",
+          "status": "open",
+          "priority": "normal",
+          "dueDate": "2026-06-12",
+          "dueTime": null,
+          "dueDateTime": null,
+          "notes": null,
+          "relatedDayKey": null,
+          "relatedBlockId": null,
+          "relatedPlaceId": null,
+          "logisticsId": null,
+          "destinationId": null,
+          "metadata": {
+            "sectionSlug": "logistics"
+          }
+        }
+      ],
+      "documents": [],
+      "richPanels": {
+        "lis-panel-day1": {
+          "format": "markdown",
+          "body": "## Alfama dusk loop\n\n- Enter from the Sé side to avoid climbing the steepest face first.\n- Carry €5 coins for miradouro vending lockers if hauling a small tripod.\n- If knees complain swap Senhora route for Graça viewpoints—same vista band lower pitch."
+        }
+      }
+    },
+    "extensions": {
+      "templatePath": "trip-templates/examples/lisbon-long-weekend-3d.jsonc",
+      "fixtureNote": "Fictitious rows for TripPWA build tests."
+    }
+  },
+  "bundle": {
+    "sections": [
+      {
+        "id": "sec-o",
+        "slug": "overview",
+        "kind": "overview",
+        "title": "Overview"
+      },
+      {
+        "id": "sec-i",
+        "slug": "itinerary",
+        "kind": "itinerary",
+        "title": "Itinerary"
+      },
+      {
+        "id": "sec-l",
+        "slug": "lodging",
+        "kind": "lodging",
+        "title": "Lodging"
+      },
+      {
+        "id": "sec-t",
+        "slug": "transport",
+        "kind": "transport",
+        "title": "Transport"
+      },
+      {
+        "id": "sec-g",
+        "slug": "logistics",
+        "kind": "logistics",
+        "title": "Logistics"
+      },
+      {
+        "id": "sec-d",
+        "slug": "dining",
+        "kind": "dining",
+        "title": "Food"
+      },
+      {
+        "id": "sec-r",
+        "slug": "reference",
+        "kind": "reference",
+        "title": "Reference"
+      }
+    ],
+    "presentation": {
+      "theme": {
+        "id": "default",
+        "packVersion": "1.0.0"
+      },
+      "hero": {
+        "emoji": "🌊",
+        "datesHtml": "✈️ Jun 13 → Jun 15 &nbsp;|&nbsp; 3 Days"
+      },
+      "themeId": "default",
+      "heroEmoji": "🌊",
+      "heroDatesHtml": "✈️ Jun 13 → Jun 15 &nbsp;|&nbsp; 3 Days",
+      "daySegmentBands": {
+        "morning": {
+          "startMinute": 330,
+          "endMinute": 720
+        },
+        "afternoon": {
+          "startMinute": 720,
+          "endMinute": 1020
+        },
+        "evening": {
+          "startMinute": 1020,
+          "endMinute": 1290
+        },
+        "night": {
+          "wraps": true,
+          "startMinute": 1290,
+          "endMinute": 330
+        }
+      }
+    }
+  }
+}
